@@ -1,17 +1,31 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/pages": ["src/pages/*"],
+      "@/layouts": ["src/layouts/*"],
+      "@/components": ["src/components/*"],
+      "@/store": ["src/store/*"],
+      "@/assets": ["src/assets/*"],
+    },
     "target": "esnext",
-    "useDefineForClassFields": true,
     "module": "esnext",
-    "moduleResolution": "node",
-    "strict": true,
-    "jsx": "preserve",
     "sourceMap": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
+    "strict": true,
+    "noUnusedParameters": true,
+    "jsx": "preserve",
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"]
+    // TODO: 사용여부 체크
+    // "allowSyntheticDefaultImports": true,
+    // "useDefineForClassFields": true,
+    // "resolveJsonModule": true,
+    // "isolatedModules": true,
+    // "lib": ["esnext", "dom"],
+    // "types": ["axios", "node", "vite/client"],
+    // "typeRoots": ["."],
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
 }
